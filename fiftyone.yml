@@ -1,0 +1,13 @@
+name: allenleetc/world-airports
+type: dataset
+author: Allen Lee
+version: 0.0.2
+url: https://github.com/allenleetc/world-airports
+license: Creative Commons Attribution 4.0 International
+description: 100 World Airports with latlongs
+fiftyone:
+  version: "*"
+supports_partial_downloads: false
+tags:
+ - image
+ - geolocation
