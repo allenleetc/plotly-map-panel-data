@@ -47,4 +47,24 @@ def download_and_prepare(dataset_dir, split=None, **kwargs):
     # Optionally report what classes exist in the dataset
     classes = None
 
-    return dataset_type, num_samples, classes
+    return None, num_samples, classes
+
+
+def load_dataset(dataset, dataset_dir, split=None, **kwargs):
+    """Loads the dataset into the given FiftyOne dataset.
+
+    Args:
+        dataset: a :class:`fiftyone.core.dataset.Dataset` to which to import
+        dataset_dir: the directory to which the dataset was downloaded
+        split (None): a split to load. The supported values are
+            ``("train", "validation", "test")``
+        **kwargs: optional keyword arguments that your dataset can define to
+            configure what/how the load is performed
+    """
+
+    # Load data into samples
+    dataset_dir = os.path.join(dataset_dir,'dataset')
+    ds = fo.Dataset.from_dir(dataset_dir, dataset_type=fo.types.FiftyOneDataset)
+
+    # Add samples to the dataset
+    dataset.add_collection(ds)
