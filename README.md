@@ -1,6 +1,7 @@
 # World Airports Dataset
 
-A dataset of 99 airports around the world with latlong coordinates.
+A [FiftyOne](https://github.com/voxel51/fiftyone) dataset of 99 airports around the world 
+with latlong coordinates.
 
 ![image](https://github.com/user-attachments/assets/8994cfab-71d4-48c5-9b2b-06020649870d)
 
